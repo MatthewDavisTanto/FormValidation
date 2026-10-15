@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Registration Form</h1>
+        <p class="subtitle">Please complete all required fields.</p>
+
+        <form id="registrationForm" novalidate>
+            <div class="field">
+                <label for="fullName">Full Name</label>
+                <input id="fullName" name="fullName" type="text" placeholder="Your full name">
+                <small class="error" id="fullNameError"></small>
+            </div>
+            <div class="field">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="text" placeholder="name@example.com">
+                <small class="error" id="emailError"></small>
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="At least 6 characters">
+                <small class="error" id="passwordError"></small>
+            </div>
+            <div class="field">
+                <label for="confirmPassword">Confirm Password</label>
+                <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter password">
+                <small class="error" id="confirmPasswordError"></small>
+            </div>
+            <div class="field">
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" type="tel" placeholder="At least 10 digits">
+                <small class="error" id="phoneError"></small>
+            </div>
+            <fieldset class="field choice-field">
+                <legend>Gender</legend>
+                <label class="inline-option"><input type="radio" name="gender" value="Male"> Male</label>
+                <label class="inline-option"><input type="radio" name="gender" value="Female"> Female</label>
+                <small class="error" id="genderError"></small>
+            </fieldset>
+            <fieldset class="field choice-field">
+                <legend>Hobbies / Interests</legend>
+                <label class="inline-option"><input type="checkbox" name="hobbies" value="Reading"> Reading</label>
+                <label class="inline-option"><input type="checkbox" name="hobbies" value="Gaming"> Gaming</label>
+                <label class="inline-option"><input type="checkbox" name="hobbies" value="Sports"> Sports</label>
+                <small class="error" id="hobbiesError"></small>
+            </fieldset>
+            <div class="field">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="">Select your country</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Other">Other</option>
+                </select>
+                <small class="error" id="countryError"></small>
+            </div>
+            <button type="submit">Submit</button>
+            <p id="successMessage" class="success" role="status"></p>
+        </form>
+        <footer>© 2026 Matthew Davis Tanto. Created for learning purposes.</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
